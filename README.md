@@ -1,6 +1,6 @@
 # edge-ses
 
-Send email with **Amazon SES** from **Cloudflare Workers**, Deno, Bun, Vercel Edge, Netlify Edge, and Node.js — without the AWS SDK.
+Send email with **Amazon SES** from **Cloudflare Workers**, Deno, Bun, Vercel Edge, Netlify Edge, and Node.js, without the AWS SDK.
 
 `edge-ses` talks to the SES v2 HTTP API directly and signs requests with Web Crypto. It has **zero runtime dependencies**, uses only standard Web APIs (`fetch`, `crypto.subtle`, `TextEncoder`, `btoa`), and includes a MIME builder for raw email with attachments and inline images.
 
