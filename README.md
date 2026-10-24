@@ -540,4 +540,4 @@ await fetch(url, {
 
 ## License
 
-MI
+MIT
