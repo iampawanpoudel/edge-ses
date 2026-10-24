@@ -1,0 +1,56 @@
+{
+  "name": "edge-ses",
+  "version": "0.1.0",
+  "description": "Send email with Amazon SES from Cloudflare Workers and other edge runtimes. Zero dependencies, Web Crypto SigV4, simple/raw/template email.",
+  "keywords": [
+    "ses",
+    "amazon-ses",
+    "email",
+    "cloudflare-workers",
+    "workers",
+    "edge",
+    "deno",
+    "bun",
+    "sigv4"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "npm run typecheck && npm run test && npm run build",
+    "prepublishOnly": "npm run check"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "tsup": "^9.0.0",
+    "typescript": "^6.0.3",
+    "vitest": "^5.0.5"
+  }
+}
