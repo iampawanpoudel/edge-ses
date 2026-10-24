@@ -540,5 +540,4 @@ await fetch(url, {
 
 ## License
 
-MIT
-# worker-email
+MI
